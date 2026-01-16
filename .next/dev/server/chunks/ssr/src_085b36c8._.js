@@ -1923,7 +1923,8 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
-const API_BASE_URL = 'http://localhost:3000/api/v1';
+const _RAW_API = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000';
+const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
 // --- Default Ward Mapping ---
 const WARD_MAPPING = {
     'Maternity': 'Maternity Ward',
@@ -1988,14 +1989,14 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                         children: "➕"
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddBedForm.jsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     " Register New Bed"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AddBedForm.jsx",
-                lineNumber: 55,
+                lineNumber: 56,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("form", {
@@ -2009,7 +2010,7 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                 children: "Specialty Type"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AddBedForm.jsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -2024,18 +2025,18 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                         children: spec
                                     }, spec, false, {
                                         fileName: "[project]/src/components/AddBedForm.jsx",
-                                        lineNumber: 69,
+                                        lineNumber: 70,
                                         columnNumber: 29
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AddBedForm.jsx",
-                                lineNumber: 63,
+                                lineNumber: 64,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/AddBedForm.jsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2048,7 +2049,7 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                         children: "Bed Number"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AddBedForm.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 78,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -2063,13 +2064,13 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AddBedForm.jsx",
-                                        lineNumber: 78,
+                                        lineNumber: 79,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AddBedForm.jsx",
-                                lineNumber: 76,
+                                lineNumber: 77,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2079,7 +2080,7 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                         children: "Ward Name"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AddBedForm.jsx",
-                                        lineNumber: 90,
+                                        lineNumber: 91,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -2094,19 +2095,19 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AddBedForm.jsx",
-                                        lineNumber: 91,
+                                        lineNumber: 92,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AddBedForm.jsx",
-                                lineNumber: 89,
+                                lineNumber: 90,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/AddBedForm.jsx",
-                        lineNumber: 74,
+                        lineNumber: 75,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -2116,19 +2117,19 @@ const AddBedForm = ({ onBedAdded, specialties })=>{
                         children: isSubmitting ? 'Registering...' : 'Add Bed to Inventory'
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddBedForm.jsx",
-                        lineNumber: 102,
+                        lineNumber: 103,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AddBedForm.jsx",
-                lineNumber: 58,
+                lineNumber: 59,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/AddBedForm.jsx",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -743,3 +743,76 @@
 [01:15:37.619] Browser WARN    History endpoint not found on server yet.
 [01:15:37.619] Browser WARN    History endpoint not found on server yet.
 [01:15:37.619] Browser WARN    History endpoint not found on server yet.
+[01:21:19.612] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:24:42.614] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:36:09.614] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:36:33.679] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:46:36.621] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:47:17.617] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NjA0ODgsImV4cCI6MTc2ODU2NDA4OH0.DHrb4fnHeve39l9f32S-mgo0UEoB_zYitb1Vgmud_Eg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1298:34)"}
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.526] Browser WARN    History endpoint not found on server yet.
+[01:56:12.947] Browser WARN    History endpoint not found on server yet.
+[01:56:12.947] Browser WARN    History endpoint not found on server yet.
+[01:56:12.947] Browser WARN    History endpoint not found on server yet.
+[01:56:12.947] Browser WARN    History endpoint not found on server yet.
+[01:56:12.948] Browser WARN    History endpoint not found on server yet.
+[01:56:12.948] Browser WARN    History endpoint not found on server yet.
+[01:56:20.215] Browser WARN    History endpoint not found on server yet.
+[01:56:20.216] Browser WARN    History endpoint not found on server yet.
+[01:56:20.216] Browser WARN    History endpoint not found on server yet.
+[01:56:20.216] Browser WARN    History endpoint not found on server yet.
+[01:56:20.216] Browser WARN    History endpoint not found on server yet.
+[01:56:20.216] Browser WARN    History endpoint not found on server yet.
+[01:56:20.576] Browser WARN    History endpoint not found on server yet.
+[01:56:20.576] Browser WARN    History endpoint not found on server yet.
+[01:56:20.576] Browser WARN    History endpoint not found on server yet.
+[01:56:20.576] Browser WARN    History endpoint not found on server yet.
+[01:56:20.576] Browser WARN    History endpoint not found on server yet.
+[01:56:20.577] Browser WARN    History endpoint not found on server yet.
+[02:23:54.886] Browser WARN    Session expired in List component
+[06:52:38.052] Browser LOG     User whoisarnold logged in successfully.
+[06:52:43.256] Browser WARN    History endpoint not found on server yet.
+[06:52:44.550] Browser WARN    History endpoint not found on server yet.
+[06:52:44.550] Browser WARN    History endpoint not found on server yet.
+[06:52:44.551] Browser WARN    History endpoint not found on server yet.
+[06:52:44.551] Browser WARN    History endpoint not found on server yet.
+[06:52:44.551] Browser WARN    History endpoint not found on server yet.
+[06:52:44.551] Browser WARN    History endpoint not found on server yet.
+[06:52:44.954] Browser WARN    History endpoint not found on server yet.
+[06:52:44.954] Browser WARN    History endpoint not found on server yet.
+[06:52:44.954] Browser WARN    History endpoint not found on server yet.
+[06:52:44.954] Browser WARN    History endpoint not found on server yet.
+[06:52:44.954] Browser WARN    History endpoint not found on server yet.
+[06:53:21.906] Browser WARN    History endpoint not found on server yet.
+[06:53:21.907] Browser WARN    History endpoint not found on server yet.
+[06:53:21.907] Browser WARN    History endpoint not found on server yet.
+[06:53:21.907] Browser WARN    History endpoint not found on server yet.
+[06:53:21.907] Browser WARN    History endpoint not found on server yet.
+[06:53:21.907] Browser WARN    History endpoint not found on server yet.
+[06:53:22.304] Browser WARN    History endpoint not found on server yet.
+[06:53:22.304] Browser WARN    History endpoint not found on server yet.
+[06:53:22.304] Browser WARN    History endpoint not found on server yet.
+[06:53:22.939] Browser WARN    History endpoint not found on server yet.
+[06:53:22.939] Browser WARN    History endpoint not found on server yet.
+[06:53:22.939] Browser WARN    History endpoint not found on server yet.
+[06:53:51.646] Browser WARN    History endpoint not found on server yet.
+[06:53:52.050] Browser WARN    History endpoint not found on server yet.
+[06:53:52.500] Browser WARN    History endpoint not found on server yet.
+[06:53:52.931] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.091] Browser WARN    History endpoint not found on server yet.
+[06:54:00.526] Browser WARN    History endpoint not found on server yet.
+[06:54:00.526] Browser WARN    History endpoint not found on server yet.
+[06:54:01.375] Browser WARN    History endpoint not found on server yet.
+[06:54:01.375] Browser WARN    History endpoint not found on server yet.
+[06:54:01.375] Browser WARN    History endpoint not found on server yet.
+[06:54:01.375] Browser WARN    History endpoint not found on server yet.
+[07:02:02.092] Server  LOG     ✓ Compiled in 176ms
