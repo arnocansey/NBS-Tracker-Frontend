@@ -3031,6 +3031,9 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
+// Normalize API base (accept either host or host + /api/v1 in env)
+const _RAW_API = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000';
+const API_BASE = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
 const SignupPage = ()=>{
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])({
         username: '',
@@ -3060,13 +3063,28 @@ const SignupPage = ()=>{
         }
         setLoading(true);
         try {
-            await __TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$2c$__$5b$project$5d2f$node_modules$2f$axios$29$__["default"].post('http://localhost:3000/api/v1/auth/signup', {
+            await __TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$2c$__$5b$project$5d2f$node_modules$2f$axios$29$__["default"].post(`${API_BASE}/auth/signup`, {
                 username: formData.username,
                 password: formData.password,
                 role: formData.role
             });
-            alert('Account created successfully!');
-            navigate('/');
+            // Auto-login after signup for a smoother flow
+            try {
+                const loginRes = await __TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$2c$__$5b$project$5d2f$node_modules$2f$axios$29$__["default"].post(`${API_BASE}/auth/login`, {
+                    username: formData.username,
+                    password: formData.password
+                });
+                const { token, user } = loginRes.data;
+                localStorage.setItem('authToken', token);
+                localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('userRole', user.role);
+                navigate('/dashboard');
+            } catch (loginErr) {
+                // Signup succeeded but auto-login failed — fallback to login page
+                console.warn('Auto-login failed after signup', loginErr);
+                alert('Account created. Please log in.');
+                navigate('/');
+            }
         } catch (err) {
             setError(err.response?.data?.error || 'Registration failed.');
         } finally{
@@ -3086,7 +3104,7 @@ const SignupPage = ()=>{
                             children: "Staff Registration"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 56,
+                            lineNumber: 77,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -3094,13 +3112,13 @@ const SignupPage = ()=>{
                             children: "No Bed Syndrome Tracker"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 57,
+                            lineNumber: 78,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/SignupPage.jsx",
-                    lineNumber: 55,
+                    lineNumber: 76,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -3111,7 +3129,7 @@ const SignupPage = ()=>{
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/SignupPage.jsx",
-                    lineNumber: 61,
+                    lineNumber: 82,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("form", {
@@ -3125,7 +3143,7 @@ const SignupPage = ()=>{
                                     children: "Username"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 68,
+                                    lineNumber: 89,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -3137,13 +3155,13 @@ const SignupPage = ()=>{
                                     onChange: handleChange
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 69,
+                                    lineNumber: 90,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 67,
+                            lineNumber: 88,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -3153,7 +3171,7 @@ const SignupPage = ()=>{
                                     children: "Password"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 80,
+                                    lineNumber: 101,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -3165,13 +3183,13 @@ const SignupPage = ()=>{
                                     onChange: handleChange
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 81,
+                                    lineNumber: 102,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 79,
+                            lineNumber: 100,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -3181,7 +3199,7 @@ const SignupPage = ()=>{
                                     children: "Confirm Password"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 92,
+                                    lineNumber: 113,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -3193,13 +3211,13 @@ const SignupPage = ()=>{
                                     onChange: handleChange
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 93,
+                                    lineNumber: 114,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 91,
+                            lineNumber: 112,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -3209,7 +3227,7 @@ const SignupPage = ()=>{
                                     children: "Access Level"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 104,
+                                    lineNumber: 125,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -3222,7 +3240,7 @@ const SignupPage = ()=>{
                                             children: "Clinical Staff"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/SignupPage.jsx",
-                                            lineNumber: 110,
+                                            lineNumber: 131,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
@@ -3230,19 +3248,19 @@ const SignupPage = ()=>{
                                             children: "Bed Manager / Admin"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/SignupPage.jsx",
-                                            lineNumber: 111,
+                                            lineNumber: 132,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/pages/SignupPage.jsx",
-                                    lineNumber: 105,
+                                    lineNumber: 126,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 103,
+                            lineNumber: 124,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -3252,13 +3270,13 @@ const SignupPage = ()=>{
                             children: loading ? 'Processing...' : 'Create Account'
                         }, void 0, false, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 115,
+                            lineNumber: 136,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/SignupPage.jsx",
-                    lineNumber: 66,
+                    lineNumber: 87,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -3269,7 +3287,7 @@ const SignupPage = ()=>{
                             children: "Already have an account? "
                         }, void 0, false, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 127,
+                            lineNumber: 148,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Link"], {
@@ -3278,24 +3296,24 @@ const SignupPage = ()=>{
                             children: "Log In"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/SignupPage.jsx",
-                            lineNumber: 128,
+                            lineNumber: 149,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/SignupPage.jsx",
-                    lineNumber: 126,
+                    lineNumber: 147,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/SignupPage.jsx",
-            lineNumber: 54,
+            lineNumber: 75,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/pages/SignupPage.jsx",
-        lineNumber: 53,
+        lineNumber: 74,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
