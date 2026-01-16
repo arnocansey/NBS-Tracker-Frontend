@@ -693,3 +693,53 @@
 [00:53:50.607] Browser WARN    History endpoint not found on server yet.
 [00:53:50.607] Browser WARN    History endpoint not found on server yet.
 [00:53:51.607] Browser WARN    History endpoint not found on server yet.
+[01:01:18.676] Browser WARN    Session expired in List component
+[01:01:18.676] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js?id=%255Bproject%255D%252Fsrc%252Fpages%252FDashboardPage.jsx+%255Bclient%255D+%2528ecmascript%2529:165:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3592:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[01:12:20.624] Browser LOG     User whoisarnold logged in successfully.
+[01:13:00.251] Server  LOG     ✓ Compiled in 275ms
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:02.157] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:13:04.949] Browser WARN    History endpoint not found on server yet.
+[01:15:07.610] Browser WARN    History endpoint not found on server yet.
+[01:15:07.611] Browser WARN    History endpoint not found on server yet.
+[01:15:07.611] Browser WARN    History endpoint not found on server yet.
+[01:15:07.611] Browser WARN    History endpoint not found on server yet.
+[01:15:07.611] Browser WARN    History endpoint not found on server yet.
+[01:15:07.611] Browser WARN    History endpoint not found on server yet.
+[01:15:36.607] Browser WARN    History endpoint not found on server yet.
+[01:15:36.607] Browser WARN    History endpoint not found on server yet.
+[01:15:36.607] Browser WARN    History endpoint not found on server yet.
+[01:15:37.619] Browser WARN    History endpoint not found on server yet.
+[01:15:37.619] Browser WARN    History endpoint not found on server yet.
+[01:15:37.619] Browser WARN    History endpoint not found on server yet.
