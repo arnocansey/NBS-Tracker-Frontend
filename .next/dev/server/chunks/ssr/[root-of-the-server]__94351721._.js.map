@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/arnoc/Desktop/No%20Bed%20Syndrome/no-bed-syndrome-tracker/frontend/pages/%5B...slug%5D.tsx"],"sourcesContent":["import dynamic from 'next/dynamic'\r\n\r\n// Mount the React Router-based App for any non-root path (client-side only)\r\nconst App = dynamic(() => import('../src/App'), { ssr: false })\r\n\r\nexport default function CatchAllPage() {\r\n  return <App />\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;;AAEA,4EAA4E;AAC5E,MAAM,MAAM,IAAA,mIAAO,EAAC;;;;;;IAA8B,KAAK;;AAExC,SAAS;IACtB,qBAAO,qKAAC;;;;;AACV"}}]
+}

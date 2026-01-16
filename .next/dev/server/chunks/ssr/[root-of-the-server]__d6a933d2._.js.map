@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/arnoc/Desktop/No%20Bed%20Syndrome/no-bed-syndrome-tracker/frontend/pages/_app.tsx"],"sourcesContent":["import type { AppProps } from 'next/app'\r\nimport '../styles/globals.css'\r\n\r\nexport default function MyApp({ Component, pageProps }: AppProps) {\r\n  return <Component {...pageProps} />\r\n}\r\n"],"names":[],"mappings":";;;;;;;AAGe,SAAS,MAAM,EAAE,SAAS,EAAE,SAAS,EAAY;IAC9D,qBAAO,qKAAC;QAAW,GAAG,SAAS;;;;;;AACjC"}}]
+}
