@@ -1241,8 +1241,9 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
-// const API_BASE_URL = 'http://localhost:3000/api/v1';
-const API_BASE_URL = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") + '/api/v1';
+// NEXT_PUBLIC_API_URL should point to the API base (including `/api/v1`) in .env.local.
+// Fallback to localhost dev API if missing.
+const API_BASE_URL = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000/api/v1';
 const TransferRequestList = ()=>{
     const [requests, setRequests] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
     const [availableBeds, setAvailableBeds] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
@@ -1319,7 +1320,7 @@ const TransferRequestList = ()=>{
         children: "Loading Requests..."
     }, void 0, false, {
         fileName: "[project]/src/components/TransferRequestList.tsx",
-        lineNumber: 86,
+        lineNumber: 87,
         columnNumber: 50
     }, ("TURBOPACK compile-time value", void 0));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1335,14 +1336,14 @@ const TransferRequestList = ()=>{
                                 className: "flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                lineNumber: 92,
+                                lineNumber: 93,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             "Live Transfer Queue"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                        lineNumber: 91,
+                        lineNumber: 92,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -1353,13 +1354,13 @@ const TransferRequestList = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                        lineNumber: 95,
+                        lineNumber: 96,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                lineNumber: 90,
+                lineNumber: 91,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1377,7 +1378,7 @@ const TransferRequestList = ()=>{
                                             children: "Patient Details"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TransferRequestList.tsx",
-                                            lineNumber: 104,
+                                            lineNumber: 105,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
@@ -1385,7 +1386,7 @@ const TransferRequestList = ()=>{
                                             children: "Priority"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TransferRequestList.tsx",
-                                            lineNumber: 105,
+                                            lineNumber: 106,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
@@ -1393,7 +1394,7 @@ const TransferRequestList = ()=>{
                                             children: "Requirement"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TransferRequestList.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 107,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
@@ -1401,18 +1402,18 @@ const TransferRequestList = ()=>{
                                             children: "Deployment"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TransferRequestList.tsx",
-                                            lineNumber: 107,
+                                            lineNumber: 108,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/TransferRequestList.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 104,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                lineNumber: 102,
+                                lineNumber: 103,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tbody", {
@@ -1428,7 +1429,7 @@ const TransferRequestList = ()=>{
                                                         children: req.patient_name
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 115,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1439,13 +1440,13 @@ const TransferRequestList = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 116,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                lineNumber: 113,
+                                                lineNumber: 114,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1455,12 +1456,12 @@ const TransferRequestList = ()=>{
                                                     children: req.priority
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                    lineNumber: 118,
+                                                    lineNumber: 119,
                                                     columnNumber: 37
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                lineNumber: 117,
+                                                lineNumber: 118,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1468,7 +1469,7 @@ const TransferRequestList = ()=>{
                                                 children: req.required_specialty
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 126,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1487,7 +1488,7 @@ const TransferRequestList = ()=>{
                                                                 children: "Select Bed"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                                lineNumber: 134,
+                                                                lineNumber: 135,
                                                                 columnNumber: 41
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             availableBeds.filter((b)=>b.specialty_type === req.required_specialty).map((b)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
@@ -1501,13 +1502,13 @@ const TransferRequestList = ()=>{
                                                                     ]
                                                                 }, b.bed_id, true, {
                                                                     fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                                    lineNumber: 138,
+                                                                    lineNumber: 139,
                                                                     columnNumber: 49
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 130,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1520,7 +1521,7 @@ const TransferRequestList = ()=>{
                                                                 children: "✅"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                                lineNumber: 146,
+                                                                lineNumber: 147,
                                                                 columnNumber: 41
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -1530,36 +1531,36 @@ const TransferRequestList = ()=>{
                                                                 children: "✕"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                                lineNumber: 153,
+                                                                lineNumber: 154,
                                                                 columnNumber: 41
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 146,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                                lineNumber: 128,
+                                                lineNumber: 129,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, req.request_id, true, {
                                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 113,
                                         columnNumber: 29
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                lineNumber: 110,
+                                lineNumber: 111,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                        lineNumber: 101,
+                        lineNumber: 102,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     requests.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1570,7 +1571,7 @@ const TransferRequestList = ()=>{
                                 children: "✨"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                lineNumber: 168,
+                                lineNumber: 169,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1578,25 +1579,25 @@ const TransferRequestList = ()=>{
                                 children: "Queue Clear - All Patients Assigned"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                                lineNumber: 169,
+                                lineNumber: 170,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TransferRequestList.tsx",
-                        lineNumber: 167,
+                        lineNumber: 168,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/TransferRequestList.tsx",
-                lineNumber: 100,
+                lineNumber: 101,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/TransferRequestList.tsx",
-        lineNumber: 89,
+        lineNumber: 90,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
