@@ -1406,3 +1406,551 @@ Import traces:
     at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
     at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
     at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:09:37.882] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:37.882] Browser WARN    History endpoint not found on server yet.
+[08:09:38.395] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:09:58.491] Browser LOG     User whoisarnold logged in successfully.
+[08:09:59.243] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.431] Browser WARN    History endpoint not found on server yet.
+[08:09:59.848] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:10:49.074] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.074] Browser WARN    History endpoint not found on server yet.
+[08:10:49.551] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2360:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3569:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:16:32.382] Server  LOG     ✓ Compiled in 51ms
+[08:16:35.507] Server  LOG     ✓ Compiled in 58ms
+[08:16:38.525] Server  LOG     ✓ Compiled in 53ms
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:40.067] Browser WARN    History endpoint not found on server yet.
+[08:16:58.584] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:16:59.324] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:16:59.324] Browser WARN    History endpoint not found on server yet.
+[08:16:59.324] Browser WARN    History endpoint not found on server yet.
+[08:16:59.324] Browser WARN    History endpoint not found on server yet.
+[08:16:59.324] Browser WARN    History endpoint not found on server yet.
+[08:16:59.324] Browser WARN    History endpoint not found on server yet.
+[08:16:59.549] Browser WARN    History endpoint not found on server yet.
+[08:16:59.550] Browser WARN    History endpoint not found on server yet.
+[08:16:59.550] Browser WARN    History endpoint not found on server yet.
+[08:16:59.734] Browser WARN    History endpoint not found on server yet.
+[08:16:59.844] Browser WARN    History endpoint not found on server yet.
+[08:17:00.297] Browser WARN    History endpoint not found on server yet.
+[08:17:00.297] Browser WARN    History endpoint not found on server yet.
+[08:26:33.026] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:26:33.759] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:26:33.759] Browser WARN    History endpoint not found on server yet.
+[08:26:33.759] Browser WARN    History endpoint not found on server yet.
+[08:26:33.759] Browser WARN    History endpoint not found on server yet.
+[08:26:33.759] Browser WARN    History endpoint not found on server yet.
+[08:26:33.759] Browser WARN    History endpoint not found on server yet.
+[08:26:34.033] Browser WARN    History endpoint not found on server yet.
+[08:26:34.033] Browser WARN    History endpoint not found on server yet.
+[08:26:34.033] Browser WARN    History endpoint not found on server yet.
+[08:26:34.293] Browser WARN    History endpoint not found on server yet.
+[08:26:34.293] Browser WARN    History endpoint not found on server yet.
+[08:26:34.293] Browser WARN    History endpoint not found on server yet.
+[08:26:34.592] Browser WARN    History endpoint not found on server yet.
+[08:33:39.063] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:38:53.064] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:39:51.072] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:40:52.070] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:41:57.072] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:42:51.065] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:43:45.073] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:44:51.072] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:45:59.071] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:46:42.068] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:46:56.060] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[08:47:42.061] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:48:36.062] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:49:36.068] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:50:36.066] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:51:36.066] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:52:36.071] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:53:36.068] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:54:36.062] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[08:55:36.066] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[12:55:52.708] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[12:56:36.065] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[12:57:36.061] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[12:58:36.063] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[12:59:36.060] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[13:00:36.062] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[13:01:36.057] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[13:02:36.058] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1Mzc1MjksImV4cCI6MTc2ODU0MTEyOX0.b3E506JiJn9a6YTuyjwS_3tBpO0ZEwhUOJRmY3_Q5mw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[13:04:02.067] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[13:04:20.241] Browser WARN    Session expired in List component
+[13:04:20.241] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at CatchAllPage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[13:04:55.009] Browser ERROR   Login failed: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"username\":\"whoisarnol\",\"password\":\"whoisarnold\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/v1/auth/login","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:13774:16)\n    at XMLHttpRequest.onloadend (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14289:167)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async handleLogin (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:32:30)","status":401}
+[13:05:09.493] Browser LOG     User whoisarnold logged in successfully.
+[13:05:11.396] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[13:05:12.156] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[13:05:12.156] Browser WARN    History endpoint not found on server yet.
+[13:05:13.131] Browser WARN    History endpoint not found on server yet.
+[13:05:13.131] Browser WARN    History endpoint not found on server yet.
+[13:05:13.131] Browser WARN    History endpoint not found on server yet.
+[13:05:13.131] Browser WARN    History endpoint not found on server yet.
+[13:05:13.456] Browser WARN    History endpoint not found on server yet.
+[13:05:14.304] Browser WARN    History endpoint not found on server yet.
+[13:05:14.304] Browser WARN    History endpoint not found on server yet.
+[13:05:14.304] Browser WARN    History endpoint not found on server yet.
+[13:05:14.465] Browser WARN    History endpoint not found on server yet.
+[13:05:14.465] Browser WARN    History endpoint not found on server yet.
+[13:05:15.369] Browser WARN    History endpoint not found on server yet.
+[13:05:36.654] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)
+[13:05:54.069] Browser ERROR   Error fetching beds {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Njg1NTUyNDAsImV4cCI6MTc2ODU1ODg0MH0.3Gs21IhByClXKgzf-ZOKfvTjJYnlXFselZgLkrrgb6o"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://nbs-backend.onrender.com/api/v1/beds","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:14335:25)\n    at Axios.request (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:15093:49)\n    at async TransferRequestList.useCallback[fetchBeds] (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:1292:34)"}
+[13:06:27.064] Browser ERROR   Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s 1 
+    at div
+    at section
+    at div
+    at div
+    at main
+    at div
+    at DashboardPage (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:2362:168)
+    at PrivateRoute (http://localhost:3001/_next/static/chunks/src_ce8b0207._.js:3571:25)
+    at RenderedRoute (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:5411:26)
+    at Routes (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6258:19)
+    at Router (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:6200:29)
+    at BrowserRouter (http://localhost:3001/_next/static/chunks/node_modules_75ab8b5e._.js:9292:26)
+    at App
+    at LoadableComponent (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js:5811:9)
+    at HomePage
+    at MyApp (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__73ecdec8._.js:475:18)
+    at PathnameContextProviderAdapter (http://localhost:3001/_next/static/chunks/node_modules_next_dist_shared_lib_8bac8163._.js:5354:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1117:9)
+    at PagesDevOverlayBridge (http://localhost:3001/_next/static/chunks/node_modules_next_dist_75b597d7._.js:1894:34)
+    at Container (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3085:1)
+    at AppContainer (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3184:25)
+    at Root (http://localhost:3001/_next/static/chunks/node_modules_next_dist_client_5a8a528e._.js:3392:17)

@@ -4,7 +4,8 @@ import ConfirmationModal from './ConfirmationModal';
 import AdmissionModal from './AdmissionModal';
 import BedHistory from './BedHistory';
 
-const API_BASE_URL = 'http://localhost:3000/api/v1';
+// const API_BASE_URL = 'http://localhost:3000/api/v1';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/v1';
 
 const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);

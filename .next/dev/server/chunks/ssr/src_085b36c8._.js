@@ -531,7 +531,8 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
-const API_BASE_URL = 'http://localhost:3000/api/v1';
+// const API_BASE_URL = 'http://localhost:3000/api/v1';
+const API_BASE_URL = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000/api/v1';
 const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
     const [isDeleteModalOpen, setIsDeleteModalOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const [isAdmissionModalOpen, setIsAdmissionModalOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
@@ -666,7 +667,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 117,
+                lineNumber: 118,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             userRole?.toUpperCase() === 'ADMIN' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -677,12 +678,12 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                     children: "🗑️"
                 }, void 0, false, {
                     fileName: "[project]/src/components/BedCard.jsx",
-                    lineNumber: 124,
+                    lineNumber: 125,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 123,
+                lineNumber: 124,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$AdmissionModal$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -692,7 +693,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                 bedNumber: bedData.bed_number
             }, void 0, false, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 129,
+                lineNumber: 130,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ConfirmationModal$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -703,7 +704,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                 message: `Discharge ${bedData.patient_name || 'Patient'}? Bed will move to CLEANING.`
             }, void 0, false, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 136,
+                lineNumber: 137,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ConfirmationModal$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -714,7 +715,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                 message: "Permanently remove this bed from inventory?"
             }, void 0, false, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 144,
+                lineNumber: 145,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -730,7 +731,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 155,
+                                lineNumber: 156,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -738,13 +739,13 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 children: status
                             }, void 0, false, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 156,
+                                lineNumber: 157,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 154,
+                        lineNumber: 155,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -757,7 +758,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                         children: "Ward:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/BedCard.jsx",
-                                        lineNumber: 160,
+                                        lineNumber: 161,
                                         columnNumber: 24
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
@@ -765,7 +766,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 160,
+                                lineNumber: 161,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -775,7 +776,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                         children: "Type:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/BedCard.jsx",
-                                        lineNumber: 161,
+                                        lineNumber: 162,
                                         columnNumber: 24
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
@@ -783,13 +784,13 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 161,
+                                lineNumber: 162,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 159,
+                        lineNumber: 160,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     status === 'OCCUPIED' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -800,7 +801,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 children: "Current Patient"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 166,
+                                lineNumber: 167,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -811,26 +812,26 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/BedCard.jsx",
-                                lineNumber: 167,
+                                lineNumber: 168,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 165,
+                        lineNumber: 166,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BedHistory$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                         history: history
                     }, void 0, false, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 173,
+                        lineNumber: 174,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 153,
+                lineNumber: 154,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -842,7 +843,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                         children: "Discharge"
                     }, void 0, false, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 179,
+                        lineNumber: 180,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     status === 'CLEANING' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -851,7 +852,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                         children: "Mark Clean"
                     }, void 0, false, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 183,
+                        lineNumber: 184,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     status === 'AVAILABLE' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -860,19 +861,19 @@ const BedCard = ({ bedData, onStatusChange, token, userRole })=>{
                         children: "Admit Patient"
                     }, void 0, false, {
                         fileName: "[project]/src/components/BedCard.jsx",
-                        lineNumber: 187,
+                        lineNumber: 188,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/BedCard.jsx",
-                lineNumber: 177,
+                lineNumber: 178,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BedCard.jsx",
-        lineNumber: 113,
+        lineNumber: 114,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
