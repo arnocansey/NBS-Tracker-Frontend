@@ -17,8 +17,9 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-// Prefer the env-configured API URL (set NEXT_PUBLIC_API_URL), fallback to localhost
-const API_BASE_URL = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000/api/v1';
+// Normalize API base: allow NEXT_PUBLIC_API_URL to be either host or host+/api/v1
+const _RAW_API = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000';
+const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
 const LoginPage = ()=>{
     _s();
     const [username, setUsername] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
@@ -64,7 +65,7 @@ const LoginPage = ()=>{
                     children: "No Bed Syndrome Tracker Login"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/LoginPage.jsx",
-                    lineNumber: 56,
+                    lineNumber: 57,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -78,7 +79,7 @@ const LoginPage = ()=>{
                                     children: "Username"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/LoginPage.jsx",
-                                    lineNumber: 62,
+                                    lineNumber: 63,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -89,13 +90,13 @@ const LoginPage = ()=>{
                                     className: "mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/LoginPage.jsx",
-                                    lineNumber: 63,
+                                    lineNumber: 64,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 61,
+                            lineNumber: 62,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -105,7 +106,7 @@ const LoginPage = ()=>{
                                     children: "Password"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/LoginPage.jsx",
-                                    lineNumber: 74,
+                                    lineNumber: 75,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -116,13 +117,13 @@ const LoginPage = ()=>{
                                     className: "mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/LoginPage.jsx",
-                                    lineNumber: 75,
+                                    lineNumber: 76,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 73,
+                            lineNumber: 74,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,7 +131,7 @@ const LoginPage = ()=>{
                             children: error
                         }, void 0, false, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 86,
+                            lineNumber: 87,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -140,7 +141,7 @@ const LoginPage = ()=>{
                             children: isLoading ? 'Logging In...' : 'Login'
                         }, void 0, false, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 90,
+                            lineNumber: 91,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Link"], {
@@ -150,7 +151,7 @@ const LoginPage = ()=>{
                             children: "Forgot password?"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 97,
+                            lineNumber: 98,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Link"], {
@@ -159,24 +160,24 @@ const LoginPage = ()=>{
                             children: "Register New Account"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/LoginPage.jsx",
-                            lineNumber: 100,
+                            lineNumber: 101,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/LoginPage.jsx",
-                    lineNumber: 58,
+                    lineNumber: 59,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/LoginPage.jsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/pages/LoginPage.jsx",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -2207,6 +2208,7 @@ __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [client] (ecmascript)");
@@ -2226,7 +2228,9 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 ;
-const API_BASE_URL = 'http://localhost:3000/api/v1';
+// Normalize API base: allow NEXT_PUBLIC_API_URL to be either host or host+/api/v1
+const _RAW_API = ("TURBOPACK compile-time value", "https://nbs-backend.onrender.com/api/v1") || 'http://localhost:3000';
+const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
 const SPECIALTY_OPTIONS = [
     'All',
     'General',
@@ -2283,14 +2287,14 @@ const AdminTools = ({ token })=>{
                         children: "🔐"
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 41,
+                        lineNumber: 43,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     " Admin: Staff Password Override"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 40,
+                lineNumber: 42,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2298,7 +2302,7 @@ const AdminTools = ({ token })=>{
                 children: "Manual override for staff experiencing 401 Authentication errors."
             }, void 0, false, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 43,
+                lineNumber: 45,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             status.msg && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2306,7 +2310,7 @@ const AdminTools = ({ token })=>{
                 children: status.msg
             }, void 0, false, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 45,
+                lineNumber: 47,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -2321,7 +2325,7 @@ const AdminTools = ({ token })=>{
                         onChange: (e)=>setTargetUser(e.target.value)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 50,
+                        lineNumber: 52,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2333,7 +2337,7 @@ const AdminTools = ({ token })=>{
                         onChange: (e)=>setNewPass(e.target.value)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 56,
+                        lineNumber: 58,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2341,19 +2345,19 @@ const AdminTools = ({ token })=>{
                         children: "Update Credentials"
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 49,
+                lineNumber: 51,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/pages/DashboardPage.jsx",
-        lineNumber: 39,
+        lineNumber: 41,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -2508,7 +2512,7 @@ const DashboardPage = ()=>{
                     children: "⚠️ Access Denied"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                    lineNumber: 172,
+                    lineNumber: 174,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2516,7 +2520,7 @@ const DashboardPage = ()=>{
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                    lineNumber: 173,
+                    lineNumber: 175,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2525,18 +2529,18 @@ const DashboardPage = ()=>{
                     children: "Return to Login"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                    lineNumber: 174,
+                    lineNumber: 176,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/DashboardPage.jsx",
-            lineNumber: 171,
+            lineNumber: 173,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/pages/DashboardPage.jsx",
-        lineNumber: 170,
+        lineNumber: 172,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -2547,7 +2551,7 @@ const DashboardPage = ()=>{
                         children: "No Bed Syndrome Tracker"
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 182,
+                        lineNumber: 184,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -2555,13 +2559,13 @@ const DashboardPage = ()=>{
                         content: "Dashboard for monitoring hospital bed availability and patient admissions."
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 183,
+                        lineNumber: 185,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 181,
+                lineNumber: 183,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2581,14 +2585,14 @@ const DashboardPage = ()=>{
                                                 children: "🏥"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 190,
+                                                lineNumber: 192,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " NO BED SYNDROME"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 189,
+                                        lineNumber: 191,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2598,7 +2602,7 @@ const DashboardPage = ()=>{
                                                 className: `h-2 w-2 rounded-full ${isOnline ? 'bg-emerald-400 animate-pulse' : 'bg-rose-500'}`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 193,
+                                                lineNumber: 195,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2606,19 +2610,19 @@ const DashboardPage = ()=>{
                                                 children: isOnline ? 'System Live' : 'Connection Lost'
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 194,
+                                                lineNumber: 196,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 192,
+                                        lineNumber: 194,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                lineNumber: 188,
+                                lineNumber: 190,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2632,7 +2636,7 @@ const DashboardPage = ()=>{
                                                 children: user?.username
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 202,
+                                                lineNumber: 204,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2640,13 +2644,13 @@ const DashboardPage = ()=>{
                                                 children: user?.role || 'Staff'
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 203,
+                                                lineNumber: 205,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 201,
+                                        lineNumber: 203,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2655,19 +2659,19 @@ const DashboardPage = ()=>{
                                         children: "LOGOUT"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 207,
+                                        lineNumber: 209,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                lineNumber: 200,
+                                lineNumber: 202,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 187,
+                        lineNumber: 189,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2684,7 +2688,7 @@ const DashboardPage = ()=>{
                                                 children: "Total Capacity"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 215,
+                                                lineNumber: 217,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2692,13 +2696,13 @@ const DashboardPage = ()=>{
                                                 children: stats.total
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 216,
+                                                lineNumber: 218,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 214,
+                                        lineNumber: 216,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2709,7 +2713,7 @@ const DashboardPage = ()=>{
                                                 children: "Available"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 219,
+                                                lineNumber: 221,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2717,13 +2721,13 @@ const DashboardPage = ()=>{
                                                 children: stats.available
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 220,
+                                                lineNumber: 222,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 218,
+                                        lineNumber: 220,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2734,7 +2738,7 @@ const DashboardPage = ()=>{
                                                 children: "Occupied"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 223,
+                                                lineNumber: 225,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2742,13 +2746,13 @@ const DashboardPage = ()=>{
                                                 children: stats.occupied
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 224,
+                                                lineNumber: 226,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 222,
+                                        lineNumber: 224,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2759,7 +2763,7 @@ const DashboardPage = ()=>{
                                                 children: "Turnover/Cleaning"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 227,
+                                                lineNumber: 229,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2767,19 +2771,19 @@ const DashboardPage = ()=>{
                                                 children: stats.cleaning
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 228,
+                                                lineNumber: 230,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 226,
+                                        lineNumber: 228,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                lineNumber: 213,
+                                lineNumber: 215,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2793,7 +2797,7 @@ const DashboardPage = ()=>{
                                                 children: "🔍"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 235,
+                                                lineNumber: 237,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2804,13 +2808,13 @@ const DashboardPage = ()=>{
                                                 onChange: (e)=>setSearchQuery(e.target.value)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 236,
+                                                lineNumber: 238,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 234,
+                                        lineNumber: 236,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2825,12 +2829,12 @@ const DashboardPage = ()=>{
                                                         children: opt
                                                     }, opt, false, {
                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                        lineNumber: 250,
+                                                        lineNumber: 252,
                                                         columnNumber: 59
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 245,
+                                                lineNumber: 247,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2841,7 +2845,7 @@ const DashboardPage = ()=>{
                                                         children: "📊"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                        lineNumber: 256,
+                                                        lineNumber: 258,
                                                         columnNumber: 29
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " ",
@@ -2850,25 +2854,25 @@ const DashboardPage = ()=>{
                                                         children: "Export"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                        lineNumber: 256,
+                                                        lineNumber: 258,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 252,
+                                                lineNumber: 254,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 244,
+                                        lineNumber: 246,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                lineNumber: 233,
+                                lineNumber: 235,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2888,7 +2892,7 @@ const DashboardPage = ()=>{
                                                                     children: "Bed Inventory"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                    lineNumber: 268,
+                                                                    lineNumber: 270,
                                                                     columnNumber: 37
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2902,18 +2906,18 @@ const DashboardPage = ()=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                    lineNumber: 269,
+                                                                    lineNumber: 271,
                                                                     columnNumber: 37
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                            lineNumber: 267,
+                                                            lineNumber: 269,
                                                             columnNumber: 33
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                        lineNumber: 266,
+                                                        lineNumber: 268,
                                                         columnNumber: 29
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2926,12 +2930,12 @@ const DashboardPage = ()=>{
                                                                 className: "h-64 bg-slate-200 animate-pulse rounded-2xl"
                                                             }, i, false, {
                                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                lineNumber: 275,
+                                                                lineNumber: 277,
                                                                 columnNumber: 57
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                        lineNumber: 274,
+                                                        lineNumber: 276,
                                                         columnNumber: 33
                                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                                         children: [
@@ -2944,12 +2948,12 @@ const DashboardPage = ()=>{
                                                                         userRole: user?.role
                                                                     }, bed.bed_id, false, {
                                                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                        lineNumber: 281,
+                                                                        lineNumber: 283,
                                                                         columnNumber: 45
                                                                     }, ("TURBOPACK compile-time value", void 0)))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                lineNumber: 279,
+                                                                lineNumber: 281,
                                                                 columnNumber: 37
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2960,12 +2964,12 @@ const DashboardPage = ()=>{
                                                                     children: showAll ? 'SHOW LESS' : `VIEW ALL ${filteredBeds.length} BEDS`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                    lineNumber: 293,
+                                                                    lineNumber: 295,
                                                                     columnNumber: 45
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                                lineNumber: 291,
+                                                                lineNumber: 293,
                                                                 columnNumber: 37
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
@@ -2973,20 +2977,20 @@ const DashboardPage = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 265,
+                                                lineNumber: 267,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             user?.role === 'ADMIN' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AdminTools, {
                                                 token: token
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                lineNumber: 305,
+                                                lineNumber: 307,
                                                 columnNumber: 52
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 264,
+                                        lineNumber: 266,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2999,46 +3003,46 @@ const DashboardPage = ()=>{
                                                     specialties: SPECIALTY_OPTIONS
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                    lineNumber: 311,
+                                                    lineNumber: 313,
                                                     columnNumber: 29
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TransferRequestForm$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                    lineNumber: 312,
+                                                    lineNumber: 314,
                                                     columnNumber: 29
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TransferRequestList$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                                                    lineNumber: 313,
+                                                    lineNumber: 315,
                                                     columnNumber: 29
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                                            lineNumber: 310,
+                                            lineNumber: 312,
                                             columnNumber: 25
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                                        lineNumber: 309,
+                                        lineNumber: 311,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                                lineNumber: 262,
+                                lineNumber: 264,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
-                        lineNumber: 211,
+                        lineNumber: 213,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 185,
+                lineNumber: 187,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             showSessionModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3051,7 +3055,7 @@ const DashboardPage = ()=>{
                             children: "🔑"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                            lineNumber: 322,
+                            lineNumber: 324,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3059,7 +3063,7 @@ const DashboardPage = ()=>{
                             children: "Session Expired"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                            lineNumber: 323,
+                            lineNumber: 325,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3067,7 +3071,7 @@ const DashboardPage = ()=>{
                             children: "For your security, you have been logged out. Please sign in again to continue managing beds."
                         }, void 0, false, {
                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                            lineNumber: 324,
+                            lineNumber: 326,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3076,18 +3080,18 @@ const DashboardPage = ()=>{
                             children: "RETURN TO LOGIN"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/DashboardPage.jsx",
-                            lineNumber: 325,
+                            lineNumber: 327,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/DashboardPage.jsx",
-                    lineNumber: 321,
+                    lineNumber: 323,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/pages/DashboardPage.jsx",
-                lineNumber: 320,
+                lineNumber: 322,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
