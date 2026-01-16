@@ -3494,19 +3494,16 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 // --- Private Route Component ---
 // This component checks if a token exists before allowing access
 const PrivateRoute = ({ children })=>{
-    // Check for the token in local storage
-    const isAuthenticated = ("TURBOPACK compile-time value", "undefined") !== 'undefined' && localStorage.getItem('authToken');
-    // If authenticated, render the children (the requested page)
-    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
-    ;
-    // If not authenticated, redirect to the login page
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Navigate"], {
+    if ("TURBOPACK compile-time truthy", 1) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Navigate"], {
         to: "/"
     }, void 0, false, {
         fileName: "[project]/src/App.tsx",
-        lineNumber: 24,
-        columnNumber: 12
+        lineNumber: 15,
+        columnNumber: 47
     }, ("TURBOPACK compile-time value", void 0));
+    //TURBOPACK unreachable
+    ;
+    const token = undefined;
 };
 const App = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["BrowserRouter"], {
@@ -3516,36 +3513,36 @@ const App = ()=>{
                     path: "/",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$LoginPage$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 32,
+                        lineNumber: 54,
                         columnNumber: 42
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 32,
+                    lineNumber: 54,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Route"], {
                     path: "/forgot-password",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$ForgotPasswordPage$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 33,
+                        lineNumber: 55,
                         columnNumber: 57
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 33,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Route"], {
                     path: "/signup",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$SignupPage$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 34,
+                        lineNumber: 56,
                         columnNumber: 48
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 34,
+                    lineNumber: 56,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Route"], {
@@ -3553,17 +3550,17 @@ const App = ()=>{
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(PrivateRoute, {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$DashboardPage$2e$jsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/App.tsx",
-                            lineNumber: 41,
+                            lineNumber: 63,
                             columnNumber: 29
                         }, void 0)
                     }, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 40,
+                        lineNumber: 62,
                         columnNumber: 25
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 37,
+                    lineNumber: 59,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$router$2d$dom__$5b$external$5d$__$28$react$2d$router$2d$dom$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$react$2d$router$2d$dom$29$__["Route"], {
@@ -3572,23 +3569,23 @@ const App = ()=>{
                         to: "/"
                     }, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 47,
+                        lineNumber: 69,
                         columnNumber: 42
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 47,
+                    lineNumber: 69,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/App.tsx",
-            lineNumber: 30,
+            lineNumber: 52,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/App.tsx",
-        lineNumber: 29,
+        lineNumber: 51,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };

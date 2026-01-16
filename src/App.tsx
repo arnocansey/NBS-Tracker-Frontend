@@ -12,16 +12,38 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 // --- Private Route Component ---
 // This component checks if a token exists before allowing access
 const PrivateRoute: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-    // Check for the token in local storage
-    const isAuthenticated = typeof window !== 'undefined' && localStorage.getItem('authToken');
-    
-    // If authenticated, render the children (the requested page)
-    if (isAuthenticated) {
-        return <>{children}</>;
+    if (typeof window === 'undefined') return <Navigate to="/" />;
+
+    const token = localStorage.getItem('authToken');
+
+    // No token -> redirect to login
+    if (!token) return <Navigate to="/" replace />;
+
+    // Try to validate token expiry (if it's a JWT)
+    try {
+        const parts = token.split('.');
+        if (parts.length === 3) {
+            const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+            if (payload.exp && typeof payload.exp === 'number') {
+                const now = Math.floor(Date.now() / 1000);
+                if (payload.exp < now) {
+                    // token expired
+                    localStorage.removeItem('authToken');
+                    localStorage.removeItem('user');
+                    localStorage.removeItem('userRole');
+                    return <Navigate to="/" replace />;
+                }
+            }
+        }
+    } catch (e) {
+        // malformed token: clear and redirect
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
+        localStorage.removeItem('userRole');
+        return <Navigate to="/" replace />;
     }
-    
-    // If not authenticated, redirect to the login page
-    return <Navigate to="/" />;
+
+    return <>{children}</>;
 };
 
 const App: React.FC = () => {

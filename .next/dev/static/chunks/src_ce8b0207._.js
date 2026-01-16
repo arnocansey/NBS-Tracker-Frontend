@@ -3599,22 +3599,58 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$ForgotPasswo
 // --- Private Route Component ---
 // This component checks if a token exists before allowing access
 const PrivateRoute = ({ children })=>{
-    // Check for the token in local storage
-    const isAuthenticated = ("TURBOPACK compile-time value", "object") !== 'undefined' && localStorage.getItem('authToken');
-    // If authenticated, render the children (the requested page)
-    if (isAuthenticated) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: children
-        }, void 0, false);
-    }
-    // If not authenticated, redirect to the login page
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Navigate"], {
-        to: "/"
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    const token = localStorage.getItem('authToken');
+    // No token -> redirect to login
+    if (!token) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Navigate"], {
+        to: "/",
+        replace: true
     }, void 0, false, {
         fileName: "[project]/src/App.tsx",
-        lineNumber: 24,
-        columnNumber: 12
+        lineNumber: 20,
+        columnNumber: 24
     }, ("TURBOPACK compile-time value", void 0));
+    // Try to validate token expiry (if it's a JWT)
+    try {
+        const parts = token.split('.');
+        if (parts.length === 3) {
+            const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+            if (payload.exp && typeof payload.exp === 'number') {
+                const now = Math.floor(Date.now() / 1000);
+                if (payload.exp < now) {
+                    // token expired
+                    localStorage.removeItem('authToken');
+                    localStorage.removeItem('user');
+                    localStorage.removeItem('userRole');
+                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Navigate"], {
+                        to: "/",
+                        replace: true
+                    }, void 0, false, {
+                        fileName: "[project]/src/App.tsx",
+                        lineNumber: 34,
+                        columnNumber: 28
+                    }, ("TURBOPACK compile-time value", void 0));
+                }
+            }
+        }
+    } catch (e) {
+        // malformed token: clear and redirect
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
+        localStorage.removeItem('userRole');
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Navigate"], {
+            to: "/",
+            replace: true
+        }, void 0, false, {
+            fileName: "[project]/src/App.tsx",
+            lineNumber: 43,
+            columnNumber: 16
+        }, ("TURBOPACK compile-time value", void 0));
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: children
+    }, void 0, false);
 };
 _c = PrivateRoute;
 const App = ()=>{
@@ -3625,36 +3661,36 @@ const App = ()=>{
                     path: "/",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$LoginPage$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 32,
+                        lineNumber: 54,
                         columnNumber: 42
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 32,
+                    lineNumber: 54,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Route"], {
                     path: "/forgot-password",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$ForgotPasswordPage$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 33,
+                        lineNumber: 55,
                         columnNumber: 57
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 33,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Route"], {
                     path: "/signup",
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$SignupPage$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 34,
+                        lineNumber: 56,
                         columnNumber: 48
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 34,
+                    lineNumber: 56,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Route"], {
@@ -3662,17 +3698,17 @@ const App = ()=>{
                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PrivateRoute, {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$DashboardPage$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/App.tsx",
-                            lineNumber: 41,
+                            lineNumber: 63,
                             columnNumber: 29
                         }, void 0)
                     }, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 40,
+                        lineNumber: 62,
                         columnNumber: 25
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 37,
+                    lineNumber: 59,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$EPOLDU6W$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Route"], {
@@ -3681,23 +3717,23 @@ const App = ()=>{
                         to: "/"
                     }, void 0, false, {
                         fileName: "[project]/src/App.tsx",
-                        lineNumber: 47,
+                        lineNumber: 69,
                         columnNumber: 42
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/App.tsx",
-                    lineNumber: 47,
+                    lineNumber: 69,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/App.tsx",
-            lineNumber: 30,
+            lineNumber: 52,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/App.tsx",
-        lineNumber: 29,
+        lineNumber: 51,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
