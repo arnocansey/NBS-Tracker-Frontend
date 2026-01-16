@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Use React Router's Link
 
-const API_BASE_URL = 'http://localhost:3000/api/v1';
+// Prefer the env-configured API URL (set NEXT_PUBLIC_API_URL), fallback to localhost
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/v1';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
