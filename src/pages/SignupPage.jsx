@@ -2,10 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-
-// Normalize API base (accept either host or host + /api/v1 in env)
-const _RAW_API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-const API_BASE = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
+import { API_BASE_URL } from '../api/axiosConfig';
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +36,7 @@ const SignupPage = () => {
         setLoading(true);
 
         try {
-            await axios.post(`${API_BASE}/auth/signup`, {
+            await axios.post(`${API_BASE_URL}/auth/signup`, {
                 username: formData.username,
                 password: formData.password,
                 role: formData.role
@@ -47,7 +44,7 @@ const SignupPage = () => {
 
             // Auto-login after signup for a smoother flow
             try {
-                const loginRes = await axios.post(`${API_BASE}/auth/login`, {
+                const loginRes = await axios.post(`${API_BASE_URL}/auth/login`, {
                     username: formData.username,
                     password: formData.password
                 });

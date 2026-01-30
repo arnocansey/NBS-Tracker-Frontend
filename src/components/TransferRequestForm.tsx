@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { TransferRequest, PriorityLevel } from '../types/transfer';
+import { API_BASE_URL } from '../api/axiosConfig';
 
-// Normalize API base: allow NEXT_PUBLIC_API_URL to be either host or host+/api/v1
-const _RAW_API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
 const SPECIALTIES = ['General', 'ICU', 'Pediatric', 'HDU', 'CCU', 'NICU', 'Emergency beds', 'PACU', 'PICU', 'Maternity'];
 const PRIORITIES: PriorityLevel[] = ['Low', 'Medium', 'High', 'Emergency'];
 

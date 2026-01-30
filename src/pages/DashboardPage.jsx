@@ -6,11 +6,8 @@ import TransferRequestList from '../components/TransferRequestList';
 import HospitalCensus from '../components/HospitalCensus';
 import AddBedForm from '../components/AddBedForm';
 import Head from 'next/head';
-
-
-// Normalize API base: allow NEXT_PUBLIC_API_URL to be either host or host+/api/v1
-const _RAW_API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
+import { Link } from 'react-router-dom';
+import { API_BASE_URL } from '../api/axiosConfig';
 
 const SPECIALTY_OPTIONS = [
     'All', 'General', 'ICU', 'Pediatric', 'HDU', 
@@ -200,6 +197,9 @@ const DashboardPage = () => {
                 </div>
 
                 <div className="flex items-center gap-6">
+                    <Link to="/analytics" className="text-sm font-bold text-white hover:underline">
+                        Analytics
+                    </Link>
                     <div className="text-right hidden sm:block">
                         <p className="text-xs font-bold text-indigo-200 uppercase">{user?.username}</p>
                         <span className={`text-[10px] px-2 py-0.5 rounded-md font-black uppercase ${user?.role === 'ADMIN' ? 'bg-rose-500 text-white' : 'bg-emerald-500 text-white'}`}>

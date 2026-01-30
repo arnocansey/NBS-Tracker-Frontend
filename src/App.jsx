@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 // Import Pages
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+import AnalyticsPage from './pages/AnalyticsPage';
 
 // --- Private Route Component ---
 // This component checks if a token exists before allowing access
@@ -38,8 +39,18 @@ const App = () => {
                         </PrivateRoute>
                     } 
                 />
+
+                {/* 3. Analytics Page: Protected route */}
+                <Route 
+                    path="/analytics" 
+                    element={
+                        <PrivateRoute>
+                            <AnalyticsPage />
+                        </PrivateRoute>
+                    } 
+                />
                 
-                {/* 3. Catch-all for 404s */}
+                {/* 4. Catch-all for 404s */}
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </Router> 

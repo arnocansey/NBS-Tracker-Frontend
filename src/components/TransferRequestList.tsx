@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { TransferRequest } from '../types/transfer';
-
-// NEXT_PUBLIC_API_URL should point to the API base (including `/api/v1`) in .env.local.
-// Fallback to localhost dev API if missing.
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/v1';
+import { API_BASE_URL } from '../api/axiosConfig';
 
 interface Bed {
     bed_id: number;

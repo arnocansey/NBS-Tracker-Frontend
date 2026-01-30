@@ -3,7 +3,8 @@
 
 __turbopack_context__.v((parentImport) => {
     return Promise.all([
-  "static/chunks/src_ce8b0207._.js",
+  "static/chunks/src_components_HospitalDiscovery_tsx_dbecb431._.js",
+  "static/chunks/src_74735f88._.js",
   "static/chunks/node_modules_75ab8b5e._.js",
   "static/chunks/src_App_tsx_d8c7b3ac._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
