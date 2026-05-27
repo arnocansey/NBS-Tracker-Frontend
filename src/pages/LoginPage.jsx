@@ -1,9 +1,8 @@
 // frontend/src/pages/LoginPage.jsx
 
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Use React Router's Link
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
@@ -18,7 +17,7 @@ const LoginPage = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+            const response = await apiClient.post('/auth/login', {
                 username,
                 password,
             });

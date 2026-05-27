@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import ConfirmationModal from './ConfirmationModal';
 import AdmissionModal from './AdmissionModal';
 import BedHistory from './BedHistory';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
 
 const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
@@ -17,9 +16,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
         let isMounted = true;
         const fetchHistory = async () => {
             try {
-                const res = await axios.get(`${API_BASE_URL}/beds/${bedId}/history`, {
-                    headers: { Authorization: `Bearer ${token}` }
-                });
+                const res = await apiClient.get(`/beds/${bedId}/history`);
                 if (isMounted) setHistory(res.data);
             } catch (err) { 
                 // If the backend isn't ready, just set history to empty so the UI doesn't break
@@ -40,13 +37,12 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
 
     const handleAdmission = async (patientName) => {
         try {
-            await axios.post(`${API_BASE_URL}/beds/${bedId}/status`, 
+            await apiClient.post(`/beds/${bedId}/status`,
                 { 
                     new_status: 'OCCUPIED', 
                     patient_name: patientName, // Explicitly pass name
                     performed_by: userRole 
-                },
-                { headers: { 'Authorization': `Bearer ${token}` } }
+                }
             );
             onStatusChange();
             setIsAdmissionModalOpen(false);
@@ -56,12 +52,11 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
     const handleDischarge = async () => {
         try {
             // When discharging, we explicitly clear the patient_name in the DB
-            await axios.post(`${API_BASE_URL}/beds/${bedId}/status`,
+            await apiClient.post(`/beds/${bedId}/status`,
                 { 
                     new_status: 'CLEANING',
                     patient_name: null // Clear the name upon discharge
-                },
-                { headers: { Authorization: `Bearer ${token}` } }
+                }
             );
             onStatusChange();
             setIsDischargeModalOpen(false);
@@ -70,9 +65,8 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
 
     const handleMarkClean = async () => {
         try {
-            await axios.post(`${API_BASE_URL}/beds/${bedId}/status`,
-                { new_status: 'AVAILABLE' },
-                { headers: { Authorization: `Bearer ${token}` } }
+            await apiClient.post(`/beds/${bedId}/status`,
+                { new_status: 'AVAILABLE' }
             );
             onStatusChange();
         } catch (err) { alert('Could not mark bed clean.'); }
@@ -80,9 +74,7 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`${API_BASE_URL}/beds/${bedId}`, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            await apiClient.delete(`/beds/${bedId}`);
             onStatusChange();
             setIsDeleteModalOpen(false);
         } catch (err) { alert('Delete failed. Discharge Patient First'); }
@@ -90,9 +82,16 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
 
     // --- UI HELPERS ---
     const isLongStay = () => {
-        if (status !== 'OCCUPIED' || !bedData.updated_at) return false;
-        return (new Date() - new Date(bedData.updated_at)) / (1000 * 60 * 60) >= 48;
+        if (status !== 'OCCUPIED' || !bedData.admitted_at) return false;
+        return (new Date() - new Date(bedData.admitted_at)) / (1000 * 60 * 60) >= 48;
     };
+
+    const cleaningMinutes = () => {
+        if (status !== 'CLEANING' || !bedData.cleaning_started_at) return null;
+        return Math.max(0, Math.floor((new Date() - new Date(bedData.cleaning_started_at)) / (1000 * 60)));
+    };
+
+    const minutesCleaning = cleaningMinutes();
 
     const getCardStyle = () => {
         let base = "";
@@ -165,6 +164,15 @@ const BedCard = ({ bedData, onStatusChange, token, userRole }) => {
                         <p className="text-[9px] uppercase font-bold text-rose-500 mb-0.5 tracking-tighter">Current Patient</p>
                         <p className="text-sm font-bold text-slate-900 truncate">
                             👤 {bedData.patient_name || 'Anonymous'}
+                        </p>
+                    </div>
+                )}
+
+                {status === 'CLEANING' && minutesCleaning !== null && (
+                    <div className={`p-3 rounded-lg border shadow-sm mb-4 ${minutesCleaning >= 30 ? 'bg-amber-100 border-amber-300' : 'bg-white/90 border-amber-100'}`}>
+                        <p className="text-[9px] uppercase font-bold text-amber-700 mb-0.5 tracking-tighter">Cleaning Elapsed</p>
+                        <p className="text-sm font-bold text-slate-900">
+                            {minutesCleaning} min {minutesCleaning >= 30 ? '(overdue)' : ''}
                         </p>
                     </div>
                 )}

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import axios from 'axios';
 import BedCard from '../components/BedCard';
 import TransferRequestForm from '../components/TransferRequestForm';
 import TransferRequestList from '../components/TransferRequestList';
 import HospitalCensus from '../components/HospitalCensus';
 import AddBedForm from '../components/AddBedForm';
+import HospitalManagement from '../components/HospitalManagement';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient, setSessionExpiredHandler } from '../api/axiosConfig';
+import { getSocket } from '../api/socket';
 
 const SPECIALTY_OPTIONS = [
     'All', 'General', 'ICU', 'Pediatric', 'HDU', 
@@ -23,9 +24,8 @@ const AdminTools = ({ token }) => {
     const handleAdminReset = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_BASE_URL}/auth/admin-reset-password`, 
+            await apiClient.post('/auth/admin-reset-password',
                 { targetUsername: targetUser, newPassword: newPass },
-                { headers: { Authorization: `Bearer ${token}` } }
             );
             setStatus({ type: 'success', msg: `Password for ${targetUser} updated successfully!` });
             setTargetUser(''); setNewPass('');
@@ -76,27 +76,25 @@ const DashboardPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [showAll, setShowAll] = useState(false);
     const [showSessionModal, setShowSessionModal] = useState(false);
+    const [overdueCleaning, setOverdueCleaning] = useState([]);
+    const [lastLiveUpdate, setLastLiveUpdate] = useState(null);
     
-    axios.interceptors.response.use(
-        (response) => response,
-        (error) => {
-            if (error.response && error.response.status === 401) {
-                setShowSessionModal(true);
-                localStorage.clear(); // Wipe the bad/expired token
-            }
-            return Promise.reject(error);
-        }
-    );
-
     const BED_LIMIT = 6;
     const user = useMemo(() => JSON.parse(localStorage.getItem('user') || '{}'), []);
     const token = localStorage.getItem('authToken');
+
+    useEffect(() => {
+        setSessionExpiredHandler(() => {
+            setShowSessionModal(true);
+            localStorage.clear();
+        });
+    }, []);
 
     // --- SYSTEM MONITORING ---
     useEffect(() => {
         const checkConnection = async () => {
             try {
-                await axios.get(`${API_BASE_URL}/beds`, { headers: { Authorization: `Bearer ${token}` } });
+                await apiClient.get('/beds');
                 setIsOnline(true);
             } catch { setIsOnline(false); }
         };
@@ -108,12 +106,10 @@ const DashboardPage = () => {
         setIsLoading(true);
         setError(null);
         try {
-            let url = `${API_BASE_URL}/beds`;
+            let url = '/beds';
             if (specialty && specialty !== 'All') url += `?specialty_type=${specialty}`;
             
-            const response = await axios.get(url, {
-                headers: { 'Authorization': `Bearer ${token}` }
-            });
+            const response = await apiClient.get(url);
             setBeds(response.data);
         } catch (err) {
             if (err.response?.status === 401) setError("Session expired. Please log in again.");
@@ -127,6 +123,40 @@ const DashboardPage = () => {
         if (token) fetchBedData(selectedSpecialty);
         else window.location.href = '/';
     }, [selectedSpecialty, fetchBedData, token]);
+
+    const fetchOverdueCleaning = useCallback(async () => {
+        try {
+            const response = await apiClient.get('/beds/cleaning/overdue');
+            setOverdueCleaning(response.data);
+        } catch {
+            setOverdueCleaning([]);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchOverdueCleaning();
+    }, [fetchOverdueCleaning, beds]);
+
+    useEffect(() => {
+        const socket = getSocket();
+        if (!socket) return undefined;
+
+        const handleBedsChanged = () => {
+            setLastLiveUpdate(new Date());
+            fetchBedData(selectedSpecialty);
+            fetchOverdueCleaning();
+        };
+
+        socket.on('beds:changed', handleBedsChanged);
+        socket.on('connect', () => setIsOnline(true));
+        socket.on('disconnect', () => setIsOnline(false));
+
+        return () => {
+            socket.off('beds:changed', handleBedsChanged);
+            socket.off('connect');
+            socket.off('disconnect');
+        };
+    }, [fetchBedData, fetchOverdueCleaning, selectedSpecialty]);
 
     // --- COMPUTED STATS ---
     const stats = useMemo(() => ({
@@ -160,6 +190,16 @@ const DashboardPage = () => {
         link.click();
     };
 
+    const releaseOverdueCleaning = async () => {
+        try {
+            await apiClient.post('/beds/cleaning/auto-release');
+            fetchBedData(selectedSpecialty);
+            fetchOverdueCleaning();
+        } catch (err) {
+            alert(err.response?.data?.error || 'Could not release overdue cleaning beds.');
+        }
+    };
+
     const handleLogout = () => {
         localStorage.clear();
         window.location.href = '/';
@@ -178,7 +218,7 @@ const DashboardPage = () => {
     return (
         <>
         <Head>
-            <title>No Bed Syndrome Tracker</title>
+            <title>MediTrack Ghana</title>
             <meta name="description" content="Dashboard for monitoring hospital bed availability and patient admissions." />
         </Head>
         <div className="min-h-screen bg-slate-50">
@@ -186,7 +226,7 @@ const DashboardPage = () => {
             <header className="bg-indigo-950 text-white p-4 shadow-xl flex justify-between items-center sticky top-0 z-50 border-b border-indigo-800">
                 <div className="flex items-center gap-4">
                     <h1 className="text-xl font-black tracking-tighter flex items-center gap-2">
-                        <span className="bg-white text-indigo-900 p-1 rounded">🏥</span> NO BED SYNDROME
+                        <span className="bg-white text-indigo-900 p-1 rounded">🏥</span> MEDITRACK GHANA
                     </h1>
                     <div className="hidden md:flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full">
                         <div className={`h-2 w-2 rounded-full ${isOnline ? 'bg-emerald-400 animate-pulse' : 'bg-rose-500'}`} />
@@ -194,6 +234,11 @@ const DashboardPage = () => {
                             {isOnline ? 'System Live' : 'Connection Lost'}
                         </span>
                     </div>
+                    {lastLiveUpdate && (
+                        <span className="hidden lg:inline text-[10px] text-indigo-200 font-bold uppercase">
+                            Updated {lastLiveUpdate.toLocaleTimeString()}
+                        </span>
+                    )}
                 </div>
 
                 <div className="flex items-center gap-6">
@@ -230,6 +275,22 @@ const DashboardPage = () => {
                         <p className="text-2xl font-black text-amber-700">{stats.cleaning}</p>
                     </div>
                 </div>
+
+                {overdueCleaning.length > 0 && (
+                    <div className="bg-amber-100 border border-amber-200 text-amber-900 p-4 rounded-xl flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                        <div>
+                            <p className="text-sm font-black uppercase">Cleaning SLA Alert</p>
+                            <p className="text-sm">{overdueCleaning.length} bed{overdueCleaning.length === 1 ? '' : 's'} overdue for cleaning completion.</p>
+                        </div>
+                        {user?.role === 'ADMIN' && (
+                            <button onClick={releaseOverdueCleaning} className="bg-amber-600 text-white px-4 py-2 rounded-lg text-xs font-black hover:bg-amber-700">
+                                Auto-release overdue beds
+                            </button>
+                        )}
+                    </div>
+                )}
+
+                <HospitalCensus beds={beds} />
 
                 {/* SEARCH & FILTER BAR */}
                 <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-4">
@@ -305,6 +366,7 @@ const DashboardPage = () => {
                         </section>
 
                         {user?.role === 'ADMIN' && <AdminTools token={token} />}
+                        {user?.role === 'ADMIN' && <HospitalManagement />}
                     </div>
 
                     {/* RIGHT SIDEBAR: FORMS & LISTS */}

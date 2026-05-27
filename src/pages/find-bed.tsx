@@ -13,7 +13,7 @@ export default function PublicFinderPage() {
 
       <nav className="bg-blue-600 p-4 text-white shadow-md">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <h1 className="font-bold text-xl">NBS Regional Finder</h1>
+          <h1 className="font-bold text-xl">LifeLink Regional Finder</h1>
           <a href="/login" className="text-sm bg-blue-700 px-3 py-1 rounded">Staff Login</a>
         </div>
       </nav>

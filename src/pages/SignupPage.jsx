@@ -1,8 +1,7 @@
 // frontend/src/pages/SignupPage.jsx
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -36,7 +35,7 @@ const SignupPage = () => {
         setLoading(true);
 
         try {
-            await axios.post(`${API_BASE_URL}/auth/signup`, {
+            await apiClient.post('/auth/signup', {
                 username: formData.username,
                 password: formData.password,
                 role: formData.role
@@ -44,7 +43,7 @@ const SignupPage = () => {
 
             // Auto-login after signup for a smoother flow
             try {
-                const loginRes = await axios.post(`${API_BASE_URL}/auth/login`, {
+                const loginRes = await apiClient.post('/auth/login', {
                     username: formData.username,
                     password: formData.password
                 });
@@ -126,8 +125,8 @@ const SignupPage = () => {
                             onChange={handleChange}
                         >
                             <option value="STAFF">Clinical Staff</option>
-                            <option value="ADMIN">Bed Manager / Admin</option>
                         </select>
+                        <p className="text-xs text-slate-500 mt-1">Admin access is assigned by an existing administrator.</p>
                     </div>
 
                     <button

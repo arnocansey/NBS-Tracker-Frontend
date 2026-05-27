@@ -1,14 +1,17 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
 import { TransferRequest } from '../types/transfer';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
+import { getSocket } from '../api/socket';
 
 interface Bed {
     bed_id: number;
+    bed_number?: string;
     ward_name: string;
     specialty_type: string;
     current_status: string;
 }
+
+const ACTIVE_STATUSES = ['PENDING', 'APPROVED', 'IN_TRANSIT'];
 
 const TransferRequestList: React.FC = () => {
     const [requests, setRequests] = useState<TransferRequest[]>([]);
@@ -17,71 +20,80 @@ const TransferRequestList: React.FC = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchBeds = useCallback(async () => {
-        const token = localStorage.getItem('authToken');
         try {
-            const response = await axios.get(`${API_BASE_URL}/beds`, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            const response = await apiClient.get('/beds');
             setAvailableBeds(response.data.filter((b: Bed) => b.current_status === 'AVAILABLE'));
         } catch (err) {
-            console.error("Error fetching beds", err);
+            console.error('Error fetching beds', err);
         }
     }, []);
 
     const fetchRequests = useCallback(async () => {
-        const token = localStorage.getItem('authToken');
-        if (!token) return;
-
         try {
-            const res = await axios.get(`${API_BASE_URL}/transfers`, {
-                headers: { 'Authorization': `Bearer ${token}` }
-            });
-            // Filter only pending requests for this list
-            setRequests(res.data.filter((r: any) => r.status === 'PENDING' || !r.status));
+            const res = await apiClient.get('/transfers');
+            setRequests(res.data.filter((r: TransferRequest) => ACTIVE_STATUSES.includes(r.status || 'PENDING')));
             setLoading(false);
         } catch (err: any) {
-            if (err.response?.status === 401) {
-                console.warn("Session expired in List component");
-            }
+            if (err.response?.status === 401) console.warn('Session expired in transfer list');
+            setLoading(false);
         }
     }, []);
 
     useEffect(() => {
         fetchRequests();
         fetchBeds();
-        const interval = setInterval(() => {
+
+        const socket = getSocket();
+        const refresh = () => {
             fetchRequests();
             fetchBeds();
-        }, 15000); // Polling every 15s for "Live" feel
-        return () => clearInterval(interval);
+        };
+
+        socket?.on('transfers:changed', refresh);
+        socket?.on('beds:changed', refresh);
+
+        return () => {
+            socket?.off('transfers:changed', refresh);
+            socket?.off('beds:changed', refresh);
+        };
     }, [fetchRequests, fetchBeds]);
 
-    const handleAction = async (id: number, action: 'APPROVED' | 'REJECTED') => {
-        const token = localStorage.getItem('authToken');
+    const handleAction = async (id: number, action: 'APPROVED' | 'REJECTED' | 'IN_TRANSIT' | 'COMPLETED') => {
         const bedId = selectedBeds[id];
+        let rejectReason = '';
+        let decisionNotes = '';
 
         if (action === 'APPROVED' && !bedId) {
-            alert("Please assign a destination bed.");
+            alert('Please assign a destination bed.');
             return;
         }
 
+        if (action === 'REJECTED') {
+            rejectReason = window.prompt('Reason for rejection?') || '';
+            if (!rejectReason.trim()) return;
+        }
+
+        if (action === 'APPROVED') {
+            decisionNotes = window.prompt('Approval note or handoff instruction (optional):') || '';
+        }
+
         try {
-            await axios.patch(`${API_BASE_URL}/transfers/${id}`, 
-                { 
-                    new_status: action,
-                    assigned_bed_id: action === 'APPROVED' ? parseInt(bedId) : null 
-                },
-                { headers: { Authorization: `Bearer ${token}` } }
-            );
-            // Instant refresh
+            await apiClient.patch(`/transfers/${id}`, {
+                new_status: action,
+                assigned_bed_id: action === 'APPROVED' ? parseInt(bedId, 10) : null,
+                reject_reason: rejectReason,
+                decision_notes: decisionNotes,
+            });
             fetchRequests();
             fetchBeds();
-        } catch (err) {
-            alert(`${action} failed. Verify backend route exists.`);
+        } catch (err: any) {
+            alert(err.response?.data?.error || `${action} failed.`);
         }
     };
 
-    if (loading && requests.length === 0) return <div className="p-10 text-center animate-pulse text-slate-400 font-bold uppercase tracking-widest">Loading Requests...</div>;
+    if (loading && requests.length === 0) {
+        return <div className="p-10 text-center animate-pulse text-slate-400 font-bold uppercase tracking-widest">Loading Requests...</div>;
+    }
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mt-6">
@@ -91,7 +103,7 @@ const TransferRequestList: React.FC = () => {
                     Live Transfer Queue
                 </h2>
                 <span className="bg-indigo-100 text-indigo-700 text-[10px] font-black px-2 py-1 rounded-full">
-                    {requests.length} PENDING
+                    {requests.length} ACTIVE
                 </span>
             </div>
 
@@ -114,47 +126,70 @@ const TransferRequestList: React.FC = () => {
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
                                     <span className={`text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-widest ${
-                                        req.priority === 'Emergency' ? 'bg-rose-600 text-white animate-pulse' : 
+                                        req.priority === 'Emergency' ? 'bg-rose-600 text-white animate-pulse' :
                                         req.priority === 'High' ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-600'
                                     }`}>
                                         {req.priority}
                                     </span>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-[11px] font-bold text-slate-600 uppercase">
-                                    {req.required_specialty}
+                                    <div>{req.required_specialty}</div>
+                                    <div className="text-[10px] text-slate-400">{req.status || 'PENDING'}</div>
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap flex items-center gap-3">
-                                    <select 
-                                        className="text-[10px] font-black border-none bg-slate-100 rounded-lg p-2 outline-none focus:ring-2 focus:ring-indigo-500"
-                                        value={selectedBeds[req.request_id || 0] || ""}
-                                        onChange={(e) => setSelectedBeds({...selectedBeds, [req.request_id || 0]: e.target.value})}
-                                    >
-                                        <option value="">Select Bed</option>
-                                        {availableBeds
-                                            .filter(b => b.specialty_type === req.required_specialty)
-                                            .map(b => (
-                                                <option key={b.bed_id} value={b.bed_id}>
-                                                    BED {b.bed_id} ({b.ward_name})
-                                                </option>
-                                            ))
-                                        }
-                                    </select>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="flex items-center gap-3">
+                                        {(req.status === 'PENDING' || !req.status) && (
+                                            <select
+                                                className="text-[10px] font-black border-none bg-slate-100 rounded-lg p-2 outline-none focus:ring-2 focus:ring-indigo-500"
+                                                value={selectedBeds[req.request_id || 0] || ''}
+                                                onChange={(e) => setSelectedBeds({ ...selectedBeds, [req.request_id || 0]: e.target.value })}
+                                            >
+                                                <option value="">Select Bed</option>
+                                                {availableBeds
+                                                    .filter(b => b.specialty_type === req.required_specialty)
+                                                    .map(b => (
+                                                        <option key={b.bed_id} value={b.bed_id}>
+                                                            {b.bed_number || `Bed ${b.bed_id}`} ({b.ward_name})
+                                                        </option>
+                                                    ))
+                                                }
+                                            </select>
+                                        )}
 
-                                    <div className="flex gap-1">
-                                        <button 
-                                            onClick={() => req.request_id && handleAction(req.request_id, 'APPROVED')}
-                                            className="p-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-all shadow-sm"
-                                            title="Approve"
-                                        >
-                                            ✅
-                                        </button>
-                                        <button 
-                                            onClick={() => req.request_id && handleAction(req.request_id, 'REJECTED')}
-                                            className="p-2 bg-rose-100 text-rose-600 rounded-lg hover:bg-rose-600 hover:text-white transition-all"
-                                            title="Reject"
-                                        >
-                                            ✕
-                                        </button>
+                                        <div className="flex gap-1">
+                                            {(req.status === 'PENDING' || !req.status) && (
+                                                <button
+                                                    onClick={() => req.request_id && handleAction(req.request_id, 'APPROVED')}
+                                                    className="px-3 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-all shadow-sm text-[10px] font-black"
+                                                >
+                                                    Approve
+                                                </button>
+                                            )}
+                                            {(req.status === 'PENDING' || !req.status) && (
+                                                <button
+                                                    onClick={() => req.request_id && handleAction(req.request_id, 'REJECTED')}
+                                                    className="px-3 py-2 bg-rose-100 text-rose-600 rounded-lg hover:bg-rose-600 hover:text-white transition-all text-[10px] font-black"
+                                                >
+                                                    Reject
+                                                </button>
+                                            )}
+                                            {req.status === 'APPROVED' && (
+                                                <button
+                                                    onClick={() => req.request_id && handleAction(req.request_id, 'IN_TRANSIT')}
+                                                    className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all text-[10px] font-black"
+                                                >
+                                                    In Transit
+                                                </button>
+                                            )}
+                                            {req.status === 'IN_TRANSIT' && (
+                                                <button
+                                                    onClick={() => req.request_id && handleAction(req.request_id, 'COMPLETED')}
+                                                    className="px-3 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all text-[10px] font-black"
+                                                >
+                                                    Complete
+                                                </button>
+                                            )}
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -163,7 +198,7 @@ const TransferRequestList: React.FC = () => {
                 </table>
                 {requests.length === 0 && (
                     <div className="text-center py-12">
-                        <div className="text-3xl mb-2">✨</div>
+                        <div className="text-3xl mb-2">Clear</div>
                         <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Queue Clear - All Patients Assigned</p>
                     </div>
                 )}

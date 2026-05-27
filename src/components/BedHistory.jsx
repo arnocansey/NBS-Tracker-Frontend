@@ -11,12 +11,14 @@ const BedHistory = ({ history }) => (
                 <p className="text-xs text-gray-400 italic">No recent history</p>
             ) : (
                 history.map((log, i) => (
-                    <div key={i} className="text-[11px] flex justify-between bg-gray-50 p-2 rounded border-l-2 border-indigo-400">
+                    <div key={log.history_id || i} className="text-[11px] flex justify-between bg-gray-50 p-2 rounded border-l-2 border-indigo-400 gap-3">
                         <div>
-                            <span className="font-bold text-indigo-900">{log.action_type}</span>: {log.patient_name}
+                            <span className="font-bold text-indigo-900">{log.action_type}</span>
+                            {log.patient_name ? `: ${log.patient_name}` : ''}
+                            {log.notes ? <div className="text-gray-500">{log.notes}</div> : null}
                         </div>
                         <div className="text-gray-400">
-                            {new Date(log.timestamp).toLocaleDateString()}
+                            {new Date(log.timestamp).toLocaleString()}
                         </div>
                     </div>
                 ))

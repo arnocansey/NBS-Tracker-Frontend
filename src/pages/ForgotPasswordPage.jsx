@@ -1,15 +1,20 @@
 // frontend/src/pages/ForgotPasswordPage.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { apiClient } from '../api/axiosConfig';
 
 const ForgotPasswordPage = () => {
     const [submitted, setSubmitted] = useState(false);
     const [username, setUsername] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically call: axios.post('/api/v1/auth/reset-request', { username })
-        setSubmitted(true);
+        try {
+            await apiClient.post('/auth/password-reset-requests', { username });
+            setSubmitted(true);
+        } catch {
+            setSubmitted(true);
+        }
     };
 
     return (

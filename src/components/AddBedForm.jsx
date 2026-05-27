@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const _RAW_API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-const API_BASE_URL = /\/api\/v1\/?$/.test(_RAW_API) ? _RAW_API.replace(/\/$/, '') : _RAW_API.replace(/\/$/, '') + '/api/v1';
+import { apiClient } from '../api/axiosConfig';
 
 // --- Default Ward Mapping ---
 const WARD_MAPPING = {
@@ -17,12 +14,13 @@ const WARD_MAPPING = {
 const AddBedForm = ({ onBedAdded, specialties }) => {
     const [formData, setFormData] = useState({
         bed_number: '', // Added this back as it's vital for your DB
+        hospital_id: '',
         ward_name: 'General Ward',
         specialty_type: 'General',
         current_status: 'AVAILABLE'
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const token = localStorage.getItem('authToken');
+    const [hospitals, setHospitals] = useState([]);
 
     // --- AUTO-FILL LOGIC ---
     // This runs whenever the specialty dropdown changes
@@ -33,12 +31,19 @@ const AddBedForm = ({ onBedAdded, specialties }) => {
         }
     }, [formData.specialty_type]);
 
+    useEffect(() => {
+        apiClient.get('/hospitals')
+            .then(res => setHospitals(res.data))
+            .catch(() => setHospitals([]));
+    }, []);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            await axios.post(`${API_BASE_URL}/beds`, formData, {
-                headers: { Authorization: `Bearer ${token}` }
+            await apiClient.post('/beds', {
+                ...formData,
+                hospital_id: formData.hospital_id ? Number(formData.hospital_id) : null
             });
             alert("New bed registered successfully!");
             // Keep the ward and specialty but clear the number for the next entry
@@ -98,6 +103,20 @@ const AddBedForm = ({ onBedAdded, specialties }) => {
                             onChange={(e) => setFormData({...formData, ward_name: e.target.value})}
                         />
                     </div>
+                </div>
+
+                <div>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Hospital</label>
+                    <select
+                        className="w-full border p-2 rounded mt-1 focus:ring-2 focus:ring-indigo-500 outline-none bg-gray-50"
+                        value={formData.hospital_id}
+                        onChange={(e) => setFormData({...formData, hospital_id: e.target.value})}
+                    >
+                        <option value="">Unassigned / Current Facility</option>
+                        {hospitals.map(hospital => (
+                            <option key={hospital.id} value={hospital.id}>{hospital.name}</option>
+                        ))}
+                    </select>
                 </div>
 
                 <button 

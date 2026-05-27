@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { TransferRequest, PriorityLevel } from '../types/transfer';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
 
 const SPECIALTIES = ['General', 'ICU', 'Pediatric', 'HDU', 'CCU', 'NICU', 'Emergency beds', 'PACU', 'PICU', 'Maternity'];
 const PRIORITIES: PriorityLevel[] = ['Low', 'Medium', 'High', 'Emergency'];
@@ -32,9 +31,7 @@ const TransferRequestForm: React.FC = () => {
                 return;
             }
 
-            await axios.post(`${API_BASE_URL}/transfers`, formData, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            await apiClient.post('/transfers', formData);
 
             setMessage({ type: 'success', text: 'Transfer request logged and patient queued!' });
             

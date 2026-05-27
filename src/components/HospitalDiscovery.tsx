@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import axios from 'axios';
-import { API_BASE_URL } from '../api/axiosConfig';
+import { apiClient } from '../api/axiosConfig';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -8,6 +7,7 @@ import L from 'leaflet';
 // --- TYPES ---
 interface WardDetail {
   ward_name: string;
+  specialty_type?: string;
   total_beds: number;
   available_beds: number;
 }
@@ -20,6 +20,8 @@ interface Hospital {
   total_capacity: number;
   lat?: number;
   lng?: number;
+  phone?: string;
+  last_bed_update?: string;
   wards: WardDetail[];
 }
 
@@ -66,14 +68,14 @@ const HospitalDiscovery: React.FC = () => {
       (err) => console.warn("Location blocked")
     );
 
-    axios.get(`${API_BASE_URL}/public/hospitals`)
+    apiClient.get('/public/hospitals')
       .then(res => setHospitals(res.data))
       .catch(err => console.error("Error loading hospitals", err));
   }, []);
 
   // 3. SEARCH & FILTERS
   const specialties = useMemo(() => {
-    const allWards = hospitals.flatMap(h => h.wards?.map(w => w.ward_name) || []);
+    const allWards = hospitals.flatMap(h => h.wards?.map(w => w.specialty_type || w.ward_name) || []);
     return [...new Set(allWards)].sort();
   }, [hospitals]);
 
@@ -86,7 +88,7 @@ const HospitalDiscovery: React.FC = () => {
         return searchTermMatch;
       }
 
-      const specialtyMatch = h.wards && h.wards.some(w => w.ward_name === specialtyFilter && w.available_beds > 0);
+      const specialtyMatch = h.wards && h.wards.some(w => (w.specialty_type === specialtyFilter || w.ward_name === specialtyFilter) && w.available_beds > 0);
 
       return searchTermMatch && specialtyMatch;
     });
@@ -258,6 +260,11 @@ const HospitalDiscovery: React.FC = () => {
                             </button>
                           </>
                         )}
+                        {hospital.last_bed_update && (
+                          <div className="text-xs text-gray-400 ml-8 mt-1">
+                            Updated {new Date(hospital.last_bed_update).toLocaleString()}
+                          </div>
+                        )}
                       </div>
                       <div className="ml-8 pt-2">
                         <div className="flex justify-between mb-1 text-xs font-medium text-gray-500">
@@ -276,6 +283,15 @@ const HospitalDiscovery: React.FC = () => {
                         <span className={`w-2 h-2 rounded-full mr-2 ${hospital.available_beds > 0 ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
                         {hospital.available_beds} Beds Available
                       </div>
+                      {hospital.phone && (
+                        <a
+                          href={`tel:${hospital.phone}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="mt-2 inline-block text-xs font-bold text-blue-600 hover:underline"
+                        >
+                          Call hospital
+                        </a>
+                      )}
                     </div>
                   </div>
                 </button>
@@ -286,7 +302,8 @@ const HospitalDiscovery: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {wardData.map((ward) => (
                         <div key={ward.ward_name} className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                          <p className="text-sm font-semibold text-gray-700 mb-1">{ward.ward_name}</p>
+                          <p className="text-sm font-semibold text-gray-700 mb-1">{ward.specialty_type || ward.ward_name}</p>
+                          <p className="text-[10px] text-gray-400 mb-2">{ward.ward_name}</p>
                           <div className="w-full bg-gray-100 h-2 rounded-full mb-2">
                             <div className="bg-blue-500 h-2 rounded-full" style={{ width: `${(ward.available_beds / ward.total_beds) * 100}%` }}></div>
                           </div>

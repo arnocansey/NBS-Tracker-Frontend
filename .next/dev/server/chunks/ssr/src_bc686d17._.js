@@ -2472,7 +2472,7 @@ const DashboardPage = ()=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("title", {
-                        children: "No Bed Syndrome Tracker"
+                        children: "MediTrack Ghana"
                     }, void 0, false, {
                         fileName: "[project]/src/pages/DashboardPage.jsx",
                         lineNumber: 181,
@@ -2512,7 +2512,7 @@ const DashboardPage = ()=>{
                                                 lineNumber: 189,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
-                                            " NO BED SYNDROME"
+                                            " MEDITRACK GHANA"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/DashboardPage.jsx",
@@ -3512,7 +3512,7 @@ function PublicFinderPage() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
                             className: "font-bold text-xl",
-                            children: "NBS Regional Finder"
+                            children: "LifeLink Regional Finder"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/find-bed.tsx",
                             lineNumber: 16,
