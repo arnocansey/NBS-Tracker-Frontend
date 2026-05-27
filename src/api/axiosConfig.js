@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const rawApi = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const rawApi = process.env.NEXT_PUBLIC_API_URL || 'https://nbs-backend.onrender.com';
 
 export const API_BASE_URL = /\/api\/v1\/?$/.test(rawApi)
   ? rawApi.replace(/\/$/, '')

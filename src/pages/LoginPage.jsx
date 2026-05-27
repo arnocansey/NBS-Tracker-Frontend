@@ -41,7 +41,11 @@ const LoginPage = () => {
         } catch (err) {
             console.error('Login failed:', err);
             // Display friendly error message
-            setError(err.response?.data?.error || 'Login failed. Check server connection.');
+            if (!err.response) {
+                setError('Login request could not reach the backend. Open this app at http://localhost:3001, or add this page origin to the backend CORS settings.');
+            } else {
+                setError(err.response?.data?.error || 'Login failed. Check your username and password.');
+            }
         } finally {
             setIsLoading(false);
         }
