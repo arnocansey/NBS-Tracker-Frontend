@@ -5,6 +5,7 @@ import TransferRequestList from '../components/TransferRequestList';
 import HospitalCensus from '../components/HospitalCensus';
 import AddBedForm from '../components/AddBedForm';
 import HospitalManagement from '../components/HospitalManagement';
+import UserManagement from '../components/UserManagement';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { apiClient, setSessionExpiredHandler } from '../api/axiosConfig';
@@ -366,6 +367,7 @@ const DashboardPage = () => {
                         </section>
 
                         {user?.role === 'ADMIN' && <AdminTools token={token} />}
+                        {user?.role === 'ADMIN' && <UserManagement />}
                         {user?.role === 'ADMIN' && <HospitalManagement />}
                     </div>
 
